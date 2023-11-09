@@ -3,7 +3,7 @@ import data from "../../../../../data/db";
 
 export const GET = async (req, res)=>{
     try {
-        const id = req.url.split("third/")[1];
+        const id = req.url.split("crud/")[1];
         console.log(id)
 
 
@@ -21,7 +21,7 @@ export const GET = async (req, res)=>{
 // Delete Operation 
 export const DELETE = async (req, res)=>{
     try {
-        const id = req.url.split("t8hird/")[1];
+        const id = req.url.split("crud/")[1];
         console.log(id)
 
         const userIndex = data.findIndex((data)=> data.id === id);
@@ -42,7 +42,7 @@ export const DELETE = async (req, res)=>{
 
 export const PUT = async (req, res)=>{
     try {
-        const id = req.url.split("third/")[1];
+        const id = req.url.split("crud/")[1];
         
         const {name, age, role} = await req.json();
 
